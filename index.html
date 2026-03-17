@@ -1,70 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lulu</title>
-    <link rel="shortcut icon" href="./lulu_no_bg_1100.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+ 
 </head>
 
-<body>
-    <div class="container">
-        <header class="logo">
-            <div class="imgg">
-                <img width="50px" height="50px"
-                    src="https://lh3.googleusercontent.com/p/AF1QipOXzhDpnpFx5T6y2xeCZP-A1Pzlj5DJ6jpNCikW=s1360-w1360-h1020-rw"
-                    alt="">
-                <h2 class="logotext">Lulu</h2>
+<body class="bg-white text-gray-800">
+
+    <!-- CHECKBOX -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+
+            <div class="flex items-center gap-2">
+                <img class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/p/AF1QipOXzhDpnpFx5T6y2xeCZP-A1Pzlj5DJ6jpNCikW=s1360-w1360-h1020-rw">
+                <h2 class="text-orange-500 text-xl font-bold">Lulu</h2>
             </div>
-            <ul class="pages">
-                <li>Bosh sahifa</li>
-                <li>tovarlar</li>
-                <li>sayt ohiri</li>
-            </ul>
-        </header>
-        <div class="about-section">
-            <div class="about-content">
-                <h1>Biz haqimizda – Lulu  do‘koni</h1>
-                <p>
-                    Lulu — chaqaloqlar va yosh bolalar uchun mo‘ljallangan mahsulotlarni
-                    taklif qiluvchi zamonaviy bolalar do‘koni. Do‘kon ota-onalar uchun
-                    qulay, sifatli va xavfsiz bolalar mahsulotlarini taqdim etishga
-                    ixtisoslashgan.
-                </p>
-            </div>
+
+            <label for="menu-toggle" class="text-3xl cursor-pointer z-50">
+                <span class="peer-checked:hidden">☰</span>
+                <span class="hidden peer-checked:inline">✖</span>
+            </label>
         </div>
-        <div class="cards">
-            <div class="card">
-                <img class="img" width="300px" height="250px" src="./kalaska.png" alt="">
-                <p>Eng sfatli kayaskalar lulu doonida</p>
-            </div>
-            <div class="card">
-                <img class="img" width="300px" height="250px" src="./kravat.png" alt="">
-                <p>Eng sfatli Yotoqlar lulu doonida</p>
-            </div>
-            <div class="card">
-                <img class="img" width="300px" height="250px" src="./velosiped.png" alt="">
-                <p>Eng sfatli velosipedlar lulu doonida</p>
-            </div>
+    </header>
 
+    <!-- OVERLAY -->
+    <label for="menu-toggle"
+        class="fixed inset-0 bg-black/50 hidden peer-checked:block z-40"></label>
 
+    <!-- MENU -->
+    <nav
+    class="fixed top-0 right-[-100%] peer-checked:right-0 w-64 h-full bg-white shadow-lg transition-all duration-300 z-50 p-6 flex flex-col gap-6 text-lg">
 
+    <label for="menu-toggle">
+        <a href="#home" class="hover:text-orange-500 block">Bosh sahifa</a>
+    </label>
 
+    <label for="menu-toggle">
+        <a href="#products" class="hover:text-orange-500 block">Mahsulotlar</a>
+    </label>
+
+    <label for="menu-toggle">
+        <a href="#contact" class="hover:text-orange-500 block">Contact</a>
+    </label>
+
+</nav>
+    <!-- HERO -->
+    <section id="home"
+        class="bg-[url('./LULU_1100px.png')] bg-cover bg-center bg-fixed relative py-40 text-center text-white">
+
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4">
+            <h1 data-aos="fade-up"
+                class="text-4xl md:text-5xl font-bold text-orange-400 mb-4">
+                Lulu do'koni
+            </h1>
+
+             <p data-aos="fade-up" data-aos-delay="200"
+                class="text-lg mb-4">
+               Biz haqimizda - Lulu do'koni
+            </p>
+
+              <p data-aos="fade-up" data-aos-delay="200"
+                class="text-lg mb-4">
+                Lulu — bolalar uchun sifatli mahsulotlar.
+            </p>
+
+            <p data-aos="fade-up" data-aos-delay="200"
+                class="text-lg mb-4">
+                Chaqaloqlar va bolalar uchun eng sifatli mahsulotlar
+            </p>
+
+            <p data-aos="fade-up" data-aos-delay="400"
+                class="text-sm text-gray-300">
+                Sizning farzandingiz uchun eng yaxshi tanlov 💖
+            </p>
         </div>
-        <div class="contact">
-            <h2>Contact Us</h2>
+    </section>
 
-            <div class="contact-info">
-                <p>📍 Address: Toshkent.sh Shayxontohur.t Qoratosh mavzesi 2v uy</p>
-                <p>📞 Phone: +998 90 009 20 80</p>
-                <p>📞 Phone: +998 90 003 20 80</p>
-                <p> Telegram: <a href="https://t.me/luludiscount">https://t.me/luludiscount</a> </p>
-            </div>
-        </div>
+    <!-- PRODUCTS -->
+    <section id="products" class="py-16 max-w-6xl mx-auto px-4">
+
+        <h2 data-aos="fade-up"
+            class="text-3xl text-center text-orange-500 font-bold mb-10">
+            Mahsulotlarimiz
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- CARD 1 -->
+    <div data-aos="zoom-in"
+        class="bg-blue-50 p-4 rounded-3xl text-center hover:scale-105 transition shadow-md">
+
+        <img class="rounded-2xl w-full h-48 object-cover mb-3" src="./kalaska.png">
+
+        <p class="text-orange-500 font-semibold text-lg">Kalyaskalar</p>
+        <p class="text-sm text-gray-500 mt-2">
+            Zamonaviy va qulay kalyaskalar bolangiz uchun maksimal komfort beradi.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+            Yuqori sifat • Mustahkam • Zamonaviy dizayn
+        </p>
+
+        <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+            Batafsil
+        </button>
     </div>
+
+    <!-- CARD 2 -->
+    <div data-aos="zoom-in" data-aos-delay="200"
+        class="bg-blue-50 p-4 rounded-3xl text-center hover:scale-105 transition shadow-md">
+
+        <img class="rounded-2xl w-full h-48 object-cover mb-3" src="./kravat.png">
+
+        <p class="text-orange-500 font-semibold text-lg">Yotoqlar</p>
+        <p class="text-sm text-gray-500 mt-2">
+            Bolalar uchun xavfsiz va qulay yotoqlar, sog‘lom uyqu uchun ideal.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+            Xavfsiz • Qulay • Sifatli material
+        </p>
+
+        <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+            Batafsil
+        </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div data-aos="zoom-in" data-aos-delay="400"
+        class="bg-blue-50 p-4 rounded-3xl text-center hover:scale-105 transition shadow-md">
+
+        <img class="rounded-2xl w-full h-48 object-cover mb-3" src="./velosiped.png">
+
+        <p class="text-orange-500 font-semibold text-lg">Velosipedlar</p>
+        <p class="text-sm text-gray-500 mt-2">
+            Faol bolalar uchun mustahkam va xavfsiz velosipedlar.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-2">
+            Sport • Faollik • Mustahkamlik
+        </p>
+
+        <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">
+            Batafsil
+        </button>
+    </div>
+
+</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-black text-white text-center py-16">
+
+        <h2 data-aos="fade-up"
+            class="text-3xl text-orange-500 mb-4">
+            Contact Us
+        </h2>
+
+        <p data-aos="fade-up" data-aos-delay="100">📍 Toshkent</p>
+       <p data-aos="fade-up" data-aos-delay="200">
+    📞 <a href="tel:+998900092080" class="hover:text-orange-400">
+        +998 90 009 20 80
+    </a>
+</p>
+
+        <a data-aos="fade-up" data-aos-delay="300"
+            href="https://t.me/luludiscount"
+            class="inline-block mt-4 text-orange-400 hover:underline">
+            Telegram orqali bog‘lanish
+        </a>
+    </section>
+
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
 </body>
 
 </html>
